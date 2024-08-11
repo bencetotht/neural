@@ -164,3 +164,8 @@ cython_debug/
 !requirements.txt
 *.csv
 .DS_Store
+
+*.jpg
+*.png
+data/*
+*.h5
