@@ -19,6 +19,7 @@ gast==0.6.0
 google-pasta==0.2.0
 grpcio==1.65.4
 h5py==3.11.0
+huggingface-hub==0.24.6
 idna==3.7
 ipykernel==6.29.5
 ipython==8.26.0
@@ -72,10 +73,12 @@ Pygments==2.18.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
 pytz==2024.1
+PyYAML==6.0.2
 pyzmq==26.1.0
 regex==2024.7.24
 requests==2.32.3
 rich==13.7.1
+safetensors==0.4.5
 scikit-learn==1.5.1
 scipy==1.14.0
 seaborn==0.13.2
@@ -90,11 +93,13 @@ tensorflow-io-gcs-filesystem==0.37.1
 termcolor==2.4.0
 threadpoolctl==3.5.0
 tiktoken==0.7.0
+tokenizers==0.19.1
 torch==2.4.1
 torchvision==0.19.1
 tornado==6.4.1
 tqdm==4.66.5
 traitlets==5.14.3
+transformers==4.44.2
 triton==3.0.0
 typing_extensions==4.12.2
 tzdata==2024.1
