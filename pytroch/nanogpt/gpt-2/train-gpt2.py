@@ -333,6 +333,20 @@ for i in range(max_steps):
             dist.all_reduce(val_loss_accum, op=dist.ReduceOp.AVG)
         if master_process:
             print(f'validation loss: {val_loss_accum.item():.4f}')
+            with open(log_file, 'a') as f:
+                f.write(f"{i} val {val_loss_accum.item():.4f}\n")
+            if i > 0 and ( i % 5000 == 0 or last_step):
+                checkpoint_path = os.path.join(log_dir, f"model_{i:05d}.pt")
+                checkpoint = {
+                    'model': raw_model.state_dict(),
+                    'config': raw_model.config,
+                    'step': i,
+                    'val_loss': val_loss_accum.item(),
+                    'optim': optimizer.state_dict(),
+                }
+                torch.save(checkpoint, checkpoint_path)
+
+
     
     # evaluate hellaswag
     if (i % 250 == 0 or last_step):
