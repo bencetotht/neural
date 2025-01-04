@@ -29,3 +29,14 @@ NeuralNetwork::NeuralNetwork(vector<int> topology) {
         this->weights.push_back(m);
     }
 }
+
+void NeuralNetwork::printToConsole() {
+    for (int i = 0; i < this->topologySize; i++) {
+        cout << "Layer " << i << endl;
+        cout << "Neurons: " << this->topology[i] << endl;
+        cout << "Weights: " << endl;
+        if (i < this->topologySize - 1) {
+            this->weights[i]->printMatrix();
+        }
+    }
+}

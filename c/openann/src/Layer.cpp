@@ -18,3 +18,22 @@ Layer::Layer(int size) {
 void Layer::setVal(int index, double val) {
     this->neurons[index]->setVal(val);
 }
+
+Matrix *Layer::matrixifyVals() {
+    Matrix *m = new Matrix(1, this->neurons.size(), false);
+    for (int i = 0; i <= this->neurons.size(); i++) {
+        m->setValue(1, i, this->neurons.at(i)->getVal());
+    }
+}
+Matrix *Layer::matrixifyActivatedVals() {
+    Matrix *m = new Matrix(1, this->neurons.size(), false);
+    for (int i = 0; i<= this->neurons.size(); i++) {
+        m->setValue(1, i, this->neurons.at(i)->getActivatedVal());
+    }
+}
+Matrix *Layer::matrixifyDerivedVals() {
+    Matrix *m = new Matrix(1, this->neurons.size(), false);
+    for (int i = 0; i<= this->neurons.size(); i++) {
+        m->setValue(1, i, this->neurons.at(i)->getDerivedVal());
+    }
+}

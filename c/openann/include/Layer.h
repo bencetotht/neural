@@ -8,12 +8,17 @@
 #include <iostream>
 #include <vector>
 
+#include "Matrix.h"
 #include "Neuron.h"
 using namespace std;
 class Layer {
 public:
     Layer(int size);
     void setVal(int index, double val);
+
+    Matrix *matrixifyVals();
+    Matrix *matrixifyActivatedVals();
+    Matrix *matrixifyDerivedVals();
 private:
     int size;
     vector<Neuron *> neurons;
