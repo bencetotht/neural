@@ -189,3 +189,7 @@ data/
 cmake-build-debug/
 
 .env*
+
+.envrc
+
+f1_cache/
