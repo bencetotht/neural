@@ -2,7 +2,7 @@
 
 A comprehensive collection of machine learning, neural network, and quantitative trading projects implemented in Python, with various deep learning frameworks. 
 
-## ## 📚 Learning Resources
+## 📚 Learning Resources
 The repository contains both projects of my own and learning projects, which I created by following online materials. I tried linking most of them, credit to all of the uploaders.
 
 I followed Andrej Karpathy's [Neural Networks: Zero to Hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) playlist, can highly recommend for getting started with neural networks.
