@@ -1,3 +1,6 @@
+# Credit:
+# This project is based on Karpathy's micrograd (https://github.com/karpathy/micrograd) repository.
+
 import math
 import numpy as np
 import random
